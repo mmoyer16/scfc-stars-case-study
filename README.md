@@ -1,5 +1,7 @@
 # scfc-stars-case-study
-A case study of the STARS system at San Carlos Flight Center, designed for aircraft squawk submission and tracking for SCFC maintenance team. Source is not included — it's SCFC property. This README and the screenshots are the case study.
+A case study of the STARS system at San Carlos Flight Center, designed for aircraft squawk submission and tracking for SCFC maintenance team. 
+
+Source is not included — it's SCFC property. This README and the screenshots are the case study.
 
 ## What is it?
 
