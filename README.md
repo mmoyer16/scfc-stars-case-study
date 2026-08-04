@@ -156,20 +156,20 @@ The classification is awaited before the response returns, so a member submittin
 
 ## Why build instead of buy?
 
-Off-the-shelf maintenance tracking exists, and for a larger operation it would probably be the right call. Two things pushed the other way here. The first is fit: SCFC's squawk workflow runs through the club website and the maintenance inbox, so the value was in having the intake form live on our own site and notifications land where the team already looks with a central website for tracking. A general-purpose product would have meant adapting the operation to the software rather than the reverse. The second is cost — recurring per-seat licensing is a real line item for a club this size, and I was already on staff. Building it also meant the system could keep changing as the maintenance team's process changed, which it has, repeatedly.
+Off-the-shelf maintenance tracking exists, and for a larger operation it would probably be the right call. Two things pushed the other way here. The first is fit: SCFC's squawk workflow runs through the club website and the maintenance inbox, so the value was in having the intake form live on our own site and notifications land where the team already looks with a central website for tracking. A general-purpose product would have meant adapting the operation to the software rather than the reverse. The second is cost: recurring per-seat licensing is a real line item for a club this size, and I was already on staff. Building it also meant the system could keep changing as the maintenance team's process changed, which it has, repeatedly.
 
 ## What has it actually contributed?
 
-STARS' contribution has been to response time and visibility rather than to catching missed squawks. Our maintenance team was already good at that. What it added is one place where the status of every aircraft is visible, and where all past issues on a given tail number come up in seconds instead of a mailbox search.
+STARS' contribution has been to response time and visibility rather than catching missed squawks. Our maintenance team was already good at that. What it added is one place where the status of every aircraft is visible, and where all past issues on a given tail number come up in seconds instead of a mailbox search.
 
-The clearest signal that it's relied on isn't a compliment — it's that people ask it for more. Shortly after routing went live, the head of maintenance came to me wanting to filter and sort by team, to assign squawks to a team rather than only to a person, and to be able to review and override what the classifier had decided. Those are requests from someone working in the system daily. The last one in particular told me the routing was being read critically rather than trusted blindly, which is exactly what the audit columns were built for.
+The clearest signal that it is valuable to our team is that people ask it for more. Shortly after routing went live, the head of maintenance came to me wanting to filter and sort by team, to assign squawks to a team rather than only to a person, and to be able to review and override what the classifier had decided. Those are requests from someone working in the system daily who sees a genuinely valuable product and wants to expand on it. The last one in particular told me the routing was being read critically rather than trusted blindly, which is exactly what the audit columns were built for.
 
 ## Current work
 
-Most of what I build now is aimed at the system outliving my time at SCFC, and that's changed how I write things. The form editor ships with operator documentation covering what each column mapping does, which rules the server enforces, and what to verify after a change — because someone using it two years from now won't know that clearing one field silently stops submissions from saving.
+Most of what I build now is aimed at the system outliving my time at SCFC, and that's changed how I write things. The form editor ships with operator documentation covering what each column mapping does, which rules the server enforces, and what to verify after a change — because someone using it two years from now won't know that clearing one field stops submissions from saving.
 
 The rules themselves live in the schema rather than the interface, so a config that would break the public intake form can't be saved at all. A reset-to-defaults behind a typed confirmation, plus a one-click config export, gives someone a way back if they get stuck anyway.
 
-Of the gaps above, the two I'm actually working on are moving classification off the request path and getting automated coverage on the config round-trip — the piece with the most to lose and the least verification.
+Of the gaps above, the main one I'm actively working on is moving classification off the request path to speed up response times and improve the user experience.
 
 _Built and maintained by Matthew Moyer — Software Engineer and Lead Line Service Technician at San Carlos Flight Center._
